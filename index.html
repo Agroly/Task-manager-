@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список задач</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="todo-app">
+            <h2>Список задач <img src="images/check-list.png" alt=""></h2>
+            <select id="filter" class="dropdown">
+                <option value="all">Все</option>
+                <option value="completed">Выполненные</option>
+                <option value="incomplete">Невыполненные</option>
+            </select>
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Введите задачу">
+            <button onclick="addTask()">Добавить</button>
+        </div>
+        <ul id="list-container">
+            <!-- <li class="checked">Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li> -->
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
