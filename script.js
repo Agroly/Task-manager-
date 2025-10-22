@@ -10,7 +10,7 @@ let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
  * Чистая функция: не изменяет внешние переменные, а просто сохраняет переданные данные.
  */
 function saveData(updatedTasks) {
-  localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+  // localStorage.setItem("tasks", JSON.stringify(updatedTasks));
 }
 
 /**
@@ -20,10 +20,10 @@ function saveData(updatedTasks) {
  */
 function addTask() {
   const text = inputBox.value.trim();
-  if (!text) {
-    alert("Введите задачу");
-    return;
-  }
+  // if (!text) {
+  //   alert("Введите задачу");
+  //   return;
+  // }
 
   tasks = [...tasks, { text, completed: false }];
   saveData(tasks);
@@ -64,8 +64,8 @@ function filterTasks(tasks, filter) {
   return tasks.filter(
     (task) =>
       filter === "all" ||
-      (filter === "completed" && task.completed) ||
-      (filter === "incomplete" && !task.completed)
+      (filter === "completed" && !task.completed) ||
+      (filter === "incomplete" && task.completed)
   );
 }
 
